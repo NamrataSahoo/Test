@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="studentbean" class="com.doit.basic.Student">  
+<property name="name" value="Vimal Jaiswal"></property>  
+</bean>
+<!-- <bean id="employeebean" class="com.doit.ci.Employee">
+<constructor-arg value="10" type="int"></constructor-arg>
+<constructor-arg value="Ram"></constructor-arg>
+</bean> -->
+<bean id="employeebean" class="com.doit.ci.Employee">
+<property name="id" value="11"> </property>
+<property name="name" value="Rama"> </property>
+</bean>
+<bean id="addrbean" class="com.doit.dependentobj.Address">
+<constructor-arg value="chennai"></constructor-arg>
+<constructor-arg value="TN"></constructor-arg>
+<constructor-arg value="INDIA"></constructor-arg>
+</bean>
+<bean id="employeeaddbean" class="com.doit.dependentobj.Employee">
+<!-- <property name="id" value="20"> </property>
+<property name= "name" value="Ramakrishna"> </property> -->
+<constructor-arg value="20"> </constructor-arg>
+<constructor-arg  value="Ramakrishna"></constructor-arg>
+<constructor-arg  ref = "addrbean"/>
+</bean>
+
+<bean id="springlistbean" class= "com.doit.springwithlist.SpringList">
+<constructor-arg value="11" type="int"></constructor-arg>
+<constructor-arg value="Question1"></constructor-arg>
+<constructor-arg>
+<list>
+<value>"Answer 1"</value>
+<value>"Answer 2"</value>
+<value>"Answer 3"</value>
+</list> 
+</constructor-arg>
+</bean>
+
+<bean id="answerbean" class="com.doit.springlistdepobj.Answer">
+<constructor-arg  value="12" type="int"></constructor-arg>
+<constructor-arg value="Raman" type="String"></constructor-arg>
+<constructor-arg value="city is chennai" type="String"></constructor-arg>
+</bean>
+<bean id="answerbean2" class="com.doit.springlistdepobj.Answer">
+<constructor-arg  value="14" type="int"></constructor-arg>
+<constructor-arg value="RamanaS" type="String"></constructor-arg>
+<constructor-arg value="city is bluru" type="String"></constructor-arg>
+</bean>
+<bean id="answerbean3" class="com.doit.springlistdepobj.Answer">
+<constructor-arg  value="15" type="int"></constructor-arg>
+<constructor-arg value="RamanaV" type="String"></constructor-arg>
+<constructor-arg value="city is hyd" type="String"></constructor-arg>
+</bean>
+
+<bean id="springlistobjbean" class="com.doit.springlistdepobj.SpringList">
+<constructor-arg type="int" value="11"></constructor-arg>
+<constructor-arg type="String" value="Ques1"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="answerbean"></ref>
+<ref bean="answerbean2"/>
+<ref bean="answerbean3"/>
+</list>
+</constructor-arg>
+</bean>
+  
+  <bean id="springmapbean" class="com.doit.springmap.SpringMap">
+  <constructor-arg type="int" value="1"></constructor-arg>
+  <constructor-arg type="String" value="Q1"></constructor-arg>
+  <constructor-arg>
+  <map>
+<entry key="Ram" value="Java"></entry>
+<entry key="Shyam" value="C++"></entry>
+<entry key="Radha" value="dotnet"></entry>
+  </map>
+  </constructor-arg>
+  </bean>
+  
+  <!-- Map -->
+  <bean id="userbean" class= "com.doit.springmapdepobj.User">
+  <constructor-arg type="int" value="1"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan"></constructor-arg>
+  <constructor-arg type="String" value="ram@gmail.com"></constructor-arg>
+  </bean>
+   <bean id="userbean1" class= "com.doit.springmapdepobj.User">
+  <constructor-arg type="int" value="11"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan1"></constructor-arg>
+  <constructor-arg type="String" value="ram1@gmail.com"></constructor-arg>
+  </bean>
+   <bean id="userbean2" class= "com.doit.springmapdepobj.User">
+  <constructor-arg type="int" value="111"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan111"></constructor-arg>
+  <constructor-arg type="String" value="ram111@gmail.com"></constructor-arg>
+  </bean>
+   <bean id="answerbeans" class= "com.doit.springmapdepobj.Answer">
+  <constructor-arg type="int" value="1"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan"></constructor-arg>
+  <constructor-arg type="String" value="Java"></constructor-arg>
+  </bean>
+   <bean id="answerbeans1" class= "com.doit.springmapdepobj.Answer">
+  <constructor-arg type="int" value="11"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan11"></constructor-arg>
+  <constructor-arg type="String" value="Java11"></constructor-arg>
+  </bean>
+   <bean id="answerbeans2" class= "com.doit.springmapdepobj.Answer">
+  <constructor-arg type="int" value="111"></constructor-arg>
+  <constructor-arg type="String" value="Rammohan111"></constructor-arg>
+  <constructor-arg type="String" value="Java111"></constructor-arg>
+  </bean>
+  <bean id="springmapdepobj" class="com.doit.springmapdepobj.SpringMap">
+  <constructor-arg type="int" value="12"> </constructor-arg>
+  <constructor-arg type="String" value="Ques1" > </constructor-arg>
+  <constructor-arg>
+  <map>
+<entry key-ref="userbean" value-ref="answerbean"></entry>
+<entry key-ref="userbean1" value-ref="answerbeans1"></entry>  
+<entry key-ref="userbean2" value-ref="answerbeans2"></entry>  
+  </map>
+  </constructor-arg>
+  </bean>
+  <!-- JAVAtpoint ex -->
+  <bean id="e1" class="com.javatpoint.Employee">  
+<constructor-arg value="101"></constructor-arg>  
+<constructor-arg  value="Sachin"></constructor-arg>  
+</bean>  
+  
+<bean id="address1" class="com.javatpoint.Address">  
+<constructor-arg value="21,Lohianagar"></constructor-arg>  
+<constructor-arg value="Ghaziabad"></constructor-arg>  
+<constructor-arg value="UP"></constructor-arg>  
+<constructor-arg value="USA"></constructor-arg>  
+</bean>  
+  
+<bean id="e2" class="com.javatpoint.Employee" parent="e1">  
+<constructor-arg ref="address1"></constructor-arg>  
+</bean>  
+
+
+<bean id="answer1" class="com.javatpoint.Answer">  
+<property name="id" value="1"></property>  
+<property name="answer" value="Java is a Programming Language"></property>  
+<property name="postedDate" value="12/12/2001"></property>  
+</bean>  
+<bean id="answer2" class="com.javatpoint.Answer">  
+<property name="id" value="2"></property>  
+<property name="answer" value="Java is a Platform"></property>  
+<property name="postedDate" value="12/12/2003"></property>  
+</bean>  
+  
+<bean id="user1" class="com.javatpoint.User">  
+<property name="id" value="1"></property>  
+<property name="name" value="Arun Kumar"></property>  
+<property name="email" value="arun@gmail.com"></property>  
+</bean>  
+<bean id="user2" class="com.javatpoint.User">  
+<property name="id" value="2"></property>  
+<property name="name" value="Varun Kumar"></property>  
+<property name="email" value="Varun@gmail.com"></property>  
+</bean>  
+  
+<bean id="q" class="com.javatpoint.Question">  
+<property name="id" value="1"></property>  
+<property name="name" value="What is Java?"></property>  
+<property name="answers">  
+<map>  
+<entry key-ref="answer1" value-ref="user1"></entry>  
+<entry key-ref="answer2" value-ref="user2"></entry>  
+</map>  
+</property>  
+</bean>  
+  
+</beans>  
