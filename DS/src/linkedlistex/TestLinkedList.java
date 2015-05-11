@@ -13,9 +13,11 @@ public class TestLinkedList {
 		linkedList.printList();
 		linkedList.insertAtPos(60, 1);
 		linkedList.printList();
+		linkedList.middleElement();
 		linkedList.sizeofLinkedlist();
 		linkedList.reverseLinkedList();
 		linkedList.printList();
+		
 	}
 
 }

@@ -10,8 +10,11 @@ class TestCollection6{
   al2.add("Hanumat");
   al2.add("Hanumat1");  
   
+  ListIterator listIterator= al.listIterator();
+  int r=listIterator.nextIndex();
+  System.out.println("r value is "+r);
   //al.retainAll(al2);  
-  al.removeAll(al2);
+//  al.removeAll(al2);
   
   System.out.println("iterating the elements after retaining the elements of al2...");  
   Iterator<String> itr=al.iterator();  

@@ -1,6 +1,9 @@
 import java.util.*;  
 public class TestCollection7{  
- public static void main(String args[]){  
+ public class A{
+ 
+ }
+	public static void main(String args[]){  
    
   LinkedList<String> al=new LinkedList<String>();  
   al.add("Ravi");  

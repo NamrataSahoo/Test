@@ -4,8 +4,13 @@ import java.util.Map;
 
 
 public class MapEx {
+	Map map1= new HashMap<>();
 	
 	public static void main(String[] args) {
+		//map1.put("1","ram");
+		
+		maintest();
+		
 		Map map=  new HashMap();
 		map.put("1", "Namrata");
 		map.put("2", "Shkm xkalue");
@@ -32,5 +37,9 @@ public class MapEx {
 			System.out.println(map.get(key));
 		}
 	}
-
+	void maintest()
+	{
+		static int i=9;
+		System.out.println("hello");
+	}
 }

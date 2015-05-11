@@ -24,6 +24,8 @@ public class NonRepeatedChar {
 			}
 		}
 		System.out.println(repeatedchar);
+		
+	
 	}
 
 }

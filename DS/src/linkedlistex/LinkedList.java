@@ -127,4 +127,20 @@ public class LinkedList {
 	{
 		reverseLinkedListInternal(startNode);
 	}
+	public Node middleElement()
+	{
+		Node currentNode= startNode;
+		Node middleNode= new Node();
+		int size= 0;
+		while(currentNode != null)
+		{
+			currentNode= currentNode.next.next;
+			middleNode=middleNode.next;
+			size++;
+			
+		}
+		System.out.println(middleNode.toString());
+		return middleNode;
+		
+	}
 }

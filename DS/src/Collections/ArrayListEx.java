@@ -3,10 +3,12 @@ package Collections;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class ArrayListEx {
 	public static void main(String[] args) {
+		//Set set= new HashSet<>();
 		ArrayList<String> al= new ArrayList<String>();
 		al.add("Sahoo");
 		al.add("Namrata");

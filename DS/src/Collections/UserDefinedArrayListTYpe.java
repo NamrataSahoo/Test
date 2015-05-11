@@ -3,6 +3,7 @@ package Collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 
 class Student implements Comparable<Student>
@@ -39,6 +40,7 @@ public class UserDefinedArrayListTYpe {
 		Student student2= new Student(2,20,"Abha");
 		Student student3= new Student(3,10,"SAbha");
 		ArrayList arrayList= new ArrayList();
+		List<Integer> list= new ArrayList<Integer>();
 		arrayList.add(student);
 		arrayList.add(student2);
 		arrayList.add(student3);
